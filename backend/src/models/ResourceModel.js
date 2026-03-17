@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 const resourceSchema = new mongoose.Schema({
+    userId: { type: String, required: true, index: true },
     type: { type: String, enum: ['EC2', 'S3'], required: true },
     name: { type: String, required: true },
     region: { type: String, required: true },
